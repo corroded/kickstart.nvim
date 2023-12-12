@@ -190,12 +190,12 @@ require('lazy').setup({
   },
 
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
+  "Tsuzat/NeoSolarized.nvim",
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
+      vim.cmd [[ colorscheme NeoSolarized ]]
+    end
   },
 
   {
